@@ -1,0 +1,16 @@
+.conteudo{
+  display: flex;
+}
+:root{
+  --primaria:#58a4b0;
+  --secundaria: #373f51;
+  --secundaria-ativa:#cccccc;
+  --fundo:#ffffff;
+  --fundo-detalhes: #ececec;
+}
+/* .tamanho-main{
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  align-items: center;
+} */

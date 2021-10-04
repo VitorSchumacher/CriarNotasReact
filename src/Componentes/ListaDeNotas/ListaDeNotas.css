@@ -1,0 +1,31 @@
+.section-lista-de-notas{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+}
+.lista-notas_mae{
+    background-color: #333;
+    flex-grow: 3;
+    padding-left: 24px;
+    padding-top: 24px;
+    width: auto;
+}
+.lista-notas{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    list-style-type: none;
+}
+.titulo-lista_header{
+    color: chartreuse;
+    font-size: 40px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.lista-notas_item{
+    margin: 12px;
+    max-width: 240px;
+    /* max-height: 400px; */
+    display: inline;
+}
