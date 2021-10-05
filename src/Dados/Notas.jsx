@@ -6,17 +6,22 @@ export default class ArrayDeNotas {
   adicionarNota(titulo, texto, id, categoria) {
     const novaNota = new Nota(titulo, texto, id, categoria);
     this.notas.push(novaNota);
+    this.notificar();
   }
   apagarNota(indice) {
     this.notas.splice(indice, 1);
+    this.notificar();
   }
-  incerver(funcao) {
+  inscrever(funcao) {
     this._inscrito.push(funcao);
+  }
+  desinscrever(funcao){
+    this._inscrito = this._inscrito.filter(f=> f!== funcao);
   }
 
   notificar() {
     this._inscrito.forEach((funcao) => {
-      funcao(this.categorias);
+      funcao(this.notas);
     });
   }
 }

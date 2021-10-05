@@ -42,15 +42,15 @@ class App extends Component {
     return (
       <section className="conteudo">
         <FormularioCadastro
-          criarNota={this.notas.adicionarNota}
-          categorias={this.categorias.categorias}
+          criarNota={this.notas.adicionarNota.bind(this.notas)}
+          categorias={this.categorias}
         />
         <ListaDeNotas
-          notas={this.notas.notas}
-          apagarNota={this.notas.apagarNota}
-          categorias={this.categorias.categorias}
-          adicionarCategoria={this.categorias.adicionarCategoria}
-          deletarCategoria={this.categorias.deletarCategoria}
+          notas={this.notas}
+          apagarNota={this.notas.apagarNota.bind(this.notas)}
+          categorias={this.categorias}
+          adicionarCategoria={this.categorias.adicionarCategoria.bind(this.categorias)}
+          deletarCategoria={this.categorias.deletarCategoria.bind(this.categorias)}
         />
       </section>
     );

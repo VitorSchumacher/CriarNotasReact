@@ -4,8 +4,14 @@ export default class Categorias {
     this._inscrito = [];
   }
 
-  incerver(funcao) {
+  inscrever(funcao) {
     this._inscrito.push(funcao);
+  }
+
+  desinscrever(funcao) {
+    console.log(this._inscrito.length);
+    this._inscrito = this._inscrito.filter((f) => f !== funcao);
+    console.log(this._inscrito.length);
   }
 
   notificar() {
@@ -14,10 +20,12 @@ export default class Categorias {
     });
   }
   adicionarCategoria(novaCategoria) {
-    console.log(this._inscrito);
+    // console.log(this.categorias);
     this.categorias.push(novaCategoria);
+    this.notificar();
   }
   deletarCategoria(indice) {
     this.categorias.splice(indice, 1);
+    this.notificar();
   }
 }

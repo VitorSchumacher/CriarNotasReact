@@ -4,6 +4,14 @@
     color: chartreuse;
     margin: 20px 0;
 }
+.cadastro-de-categrias_input{
+    background: #444;
+    color: chartreuse;
+    border: none;
+}
+.opcao-para-categoria_escrita{
+    color: chartreuse;
+}
 .form-cadastro{
     flex-grow:0;
     box-shadow: 0 0 4px rgba(0,0,0,0.3);
@@ -13,6 +21,7 @@
     flex-direction: column;
     padding: 12px 40px;
     flex-shrink: 0;
+    color: chartreuse;
 }
 
 .form-cadastro_input{
@@ -22,7 +31,7 @@
     background-color: #444;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    color: white;
+    color: chartreuse;
 }
 .form-cadastro_submit{
     align-self: flex-end;

@@ -10,19 +10,33 @@ class ListaDeNotas extends Component {
   //     this.nota.shift();
   //   }
   // }
+  constructor() {
+    super();
+    this.state = { notas: [] };
+    this._novasNotas = this._novasNotas.bind(this);
+  }
+  componentDidMount() {
+    this.props.notas.inscrever(this._novasNotas);
+  }
+  componentWillUnmount(){
+    this.props.notas.desinscrever(this._novasNotas);
+  }
+  _novasNotas(notas) {
+    this.setState({ ...this.state, notas });
+  }
   render() {
     return (
       <>
         <section className="section-lista-de-notas">
           <ListaDeCategorias
             categorias={this.props.categorias}
-            adicionarCategoria={this.props.adicionarCategoria}
+            adicionarCategoria={this.props.adicionarCategoria.bind(this)}
             deletarCategoria={this.props.deletarCategoria}
           />
           <div className="lista-notas_mae">
             <h3 className="titulo-lista_header">Suas notas:</h3>
             <ul className="lista-notas">
-              {this.props.notas.map((nota, index) => {
+              {this.state.notas.map((nota, index) => {
                 return (
                   <li className="lista-notas_item" key={index}>
                     <CardNota

@@ -19,3 +19,9 @@
     padding: 8px 15px;
     border-radius: 15px;
 }
+.form-para-add-categoria{
+    background-color: #444;
+    border: 1px solid chartreuse;
+    padding: 5px;
+    color: chartreuse;
+}
